@@ -9,6 +9,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from discord.utils import get
 from discord import FFmpegPCMAudio
+import os
 
 bot = commands.Bot(command_prefix='p')
 client = discord.Client()
@@ -456,5 +457,6 @@ p목록재생 -> 목록에 추가된 노래를 재생합니다.
 p목록초기화 -> 목록에 추가된 모든 노래를 지웁니다.
 \np대기열추가 [노래] -> 노래를 대기열에 추가합니다.
 p대기열삭제 [숫자] -> 대기열에서 입력한 숫자에 해당하는 노래를 지웁니다.""", color = 0x00ff00))
-
-bot.run('OTI2NzY5OTcxMTI2NzU5NDI0.YdAfyw.-36MRIWD5TaBCRA3loQrRToBGfw')
+    
+access_token = os.environ["BOT.TOKEN"]
+bot.run(access_token)
